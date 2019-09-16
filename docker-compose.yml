@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  jupyter:
+    container_name: jupyter-notebook
+    image: jupyter/base-notebook
+    command: "start.sh jupyter notebook --NotebookApp.token=''"
+    ports:
+      - "8888:8888"
+    volumes:
+      - /tmp/jupyter_test_dir:/home/work
